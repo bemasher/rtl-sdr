@@ -20,9 +20,3 @@ RUN cmake ../ -DINSTALL_UDEV_RULES=ON -DDETACH_KERNEL_DRIVER=ON
 RUN make
 RUN make install
 RUN ldconfig
-
-# Build:
-# docker build -t bemasher/rtlsdr .
-
-# Run:
-# docker run -d --privileged -v /dev/bus/usb:/dev/bus/usb --name rtltcp bemasher/rtl-sdr rtl_tcp -a 0.0.0.0
